@@ -43,7 +43,7 @@ export default {
   flex: 1;
   height: 40px;
   line-height: 40px;
-    font-weight: 900;
+  font-weight: 900;
 }
 .tab-control-item span{
   padding: 5px;

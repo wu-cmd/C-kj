@@ -14,13 +14,12 @@ export default {
 
   #tab-bar{
     display: flex;
+    /* border:1px solid #000; */
     background-color: #f2f2f2;
-
     position: fixed;
     left: 0;
     bottom: 0;
     right: 0;
-
     box-shadow: 0px -1px 1px rgba(100,100,100,0.2);
   }
 </style>

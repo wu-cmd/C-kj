@@ -3,6 +3,7 @@
     <div v-if="isActive"><slot name="item-icon"></slot></div>
     <div v-else><slot name="item-icon-active"></slot></div> 
     <div :style="activeStyle" :class="{active:true}"><slot name="item-text"></slot></div>
+ <!-- :class="{active:true}"默认浅蓝色 -->
   </div>
 </template>
 
@@ -32,6 +33,9 @@ export default {
     }
   },
   computed: {
+
+    // 判断传入是否等于当前活跃的页面，是的话就高亮
+    // /home ->item1（/home）=true
     isActive(){
       return this.$route.path.indexOf(this.path) !== 0
       // return this.$route.path == this.path
@@ -51,6 +55,7 @@ export default {
 <style scoped>
 
   .tab-bar-item{
+     /* border:1px solid red; */
     flex: 1;
     text-align: center;
     /* tabbar高度一般都是49px */

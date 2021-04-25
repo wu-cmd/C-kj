@@ -1,5 +1,6 @@
 <template>
   <tab-bar>
+    <!-- activeColor="rgb(128,171,239) 字体颜色 -->
       <tab-bar-item path="/home" activeColor="rgb(128,171,239)">
         <img src="~assets/img/tabbar/首页.png" alt="" slot="item-icon">
         <img src="~assets/img/tabbar/首页1.png" alt="" slot="item-icon-active">

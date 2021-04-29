@@ -42,7 +42,7 @@ export default {
       recommends:[],
       goods:{
         'pop':{page:0,list:[]},
-        'news':{page:0,list:[]},
+        'new':{page:0,list:[]},
         'sell':{page:0,list:[]},
 
       },
@@ -54,7 +54,7 @@ export default {
        this.getHomeMultidata()
 
        this.getHomeGoods('pop')
-       this.getHomeGoods('news')
+       this.getHomeGoods('new')
        this.getHomeGoods('sell')
   },
   mounted() {
@@ -63,18 +63,15 @@ export default {
 
   },
   methods: {
-     tabClick(index){
-
-            
+     tabClick(index){   
       // console.log(index)
       switch(index){
         case 0:
-          
           this.currentType = 'pop'
          console.log(this.currentType = 'pop')
           break
         case 1:
-          this.currentType = 'new'
+          this.currentType = 'news'
            console.log(this.currentType = 'new')
           break
         case 2:
@@ -108,6 +105,7 @@ export default {
 },
     computed: {
     showGoods(){
+        console.log("aaa",this.goods[this.currentType])
       return this.goods[this.currentType].list
     }
   },
